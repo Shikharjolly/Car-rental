@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		065D51472BC6484B00C40C69 /* hbcarrental_4900projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51462BC6484B00C40C69 /* hbcarrental_4900projectApp.swift */; };
+		065D51492BC6484B00C40C69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51482BC6484B00C40C69 /* ContentView.swift */; };
+		065D514B2BC6484B00C40C69 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D514A2BC6484B00C40C69 /* Item.swift */; };
+		065D514D2BC6484D00C40C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065D514C2BC6484D00C40C69 /* Assets.xcassets */; };
+		065D51502BC6484D00C40C69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065D514F2BC6484D00C40C69 /* Preview Assets.xcassets */; };
+		065D515A2BC6484D00C40C69 /* hbcarrental_4900projectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51592BC6484D00C40C69 /* hbcarrental_4900projectTests.swift */; };
+		065D51642BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51632BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift */; };
+		065D51662BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */; };
+		065D51752BC7282800C40C69 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51742BC7282700C40C69 /* ReservationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		065D51562BC6484D00C40C69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 065D513B2BC6484B00C40C69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 065D51422BC6484B00C40C69;
+			remoteInfo = hbcarrental.4900project;
+		};
+		065D51602BC6484D00C40C69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 065D513B2BC6484B00C40C69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 065D51422BC6484B00C40C69;
+			remoteInfo = hbcarrental.4900project;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		065D51432BC6484B00C40C69 /* hbcarrental.4900project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hbcarrental.4900project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D51462BC6484B00C40C69 /* hbcarrental_4900projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectApp.swift; sourceTree = "<group>"; };
+		065D51482BC6484B00C40C69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		065D514A2BC6484B00C40C69 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		065D514C2BC6484D00C40C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		065D514F2BC6484D00C40C69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		065D51552BC6484D00C40C69 /* hbcarrental.4900projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hbcarrental.4900projectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D51592BC6484D00C40C69 /* hbcarrental_4900projectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectTests.swift; sourceTree = "<group>"; };
+		065D515F2BC6484D00C40C69 /* hbcarrental.4900projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hbcarrental.4900projectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		065D51632BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectUITests.swift; sourceTree = "<group>"; };
+		065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		065D51742BC7282700C40C69 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		065D51402BC6484B00C40C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D51522BC6484D00C40C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D515C2BC6484D00C40C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		065D513A2BC6484B00C40C69 = {
+			isa = PBXGroup;
+			children = (
+				065D51452BC6484B00C40C69 /* hbcarrental.4900project */,
+				065D51582BC6484D00C40C69 /* hbcarrental.4900projectTests */,
+				065D51622BC6484D00C40C69 /* hbcarrental.4900projectUITests */,
+				065D51442BC6484B00C40C69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		065D51442BC6484B00C40C69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				065D51432BC6484B00C40C69 /* hbcarrental.4900project.app */,
+				065D51552BC6484D00C40C69 /* hbcarrental.4900projectTests.xctest */,
+				065D515F2BC6484D00C40C69 /* hbcarrental.4900projectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		065D51452BC6484B00C40C69 /* hbcarrental.4900project */ = {
+			isa = PBXGroup;
+			children = (
+				065D51462BC6484B00C40C69 /* hbcarrental_4900projectApp.swift */,
+				065D51482BC6484B00C40C69 /* ContentView.swift */,
+				065D514A2BC6484B00C40C69 /* Item.swift */,
+				065D514C2BC6484D00C40C69 /* Assets.xcassets */,
+				065D514E2BC6484D00C40C69 /* Preview Content */,
+				065D51742BC7282700C40C69 /* ReservationView.swift */,
+			);
+			path = hbcarrental.4900project;
+			sourceTree = "<group>";
+		};
+		065D514E2BC6484D00C40C69 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				065D514F2BC6484D00C40C69 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		065D51582BC6484D00C40C69 /* hbcarrental.4900projectTests */ = {
+			isa = PBXGroup;
+			children = (
+				065D51592BC6484D00C40C69 /* hbcarrental_4900projectTests.swift */,
+			);
+			path = hbcarrental.4900projectTests;
+			sourceTree = "<group>";
+		};
+		065D51622BC6484D00C40C69 /* hbcarrental.4900projectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				065D51632BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift */,
+				065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */,
+			);
+			path = hbcarrental.4900projectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		065D51422BC6484B00C40C69 /* hbcarrental.4900project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 065D51692BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900project" */;
+			buildPhases = (
+				065D513F2BC6484B00C40C69 /* Sources */,
+				065D51402BC6484B00C40C69 /* Frameworks */,
+				065D51412BC6484B00C40C69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hbcarrental.4900project;
+			productName = hbcarrental.4900project;
+			productReference = 065D51432BC6484B00C40C69 /* hbcarrental.4900project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		065D51542BC6484D00C40C69 /* hbcarrental.4900projectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 065D516C2BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900projectTests" */;
+			buildPhases = (
+				065D51512BC6484D00C40C69 /* Sources */,
+				065D51522BC6484D00C40C69 /* Frameworks */,
+				065D51532BC6484D00C40C69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				065D51572BC6484D00C40C69 /* PBXTargetDependency */,
+			);
+			name = hbcarrental.4900projectTests;
+			productName = hbcarrental.4900projectTests;
+			productReference = 065D51552BC6484D00C40C69 /* hbcarrental.4900projectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		065D515E2BC6484D00C40C69 /* hbcarrental.4900projectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 065D516F2BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900projectUITests" */;
+			buildPhases = (
+				065D515B2BC6484D00C40C69 /* Sources */,
+				065D515C2BC6484D00C40C69 /* Frameworks */,
+				065D515D2BC6484D00C40C69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				065D51612BC6484D00C40C69 /* PBXTargetDependency */,
+			);
+			name = hbcarrental.4900projectUITests;
+			productName = hbcarrental.4900projectUITests;
+			productReference = 065D515F2BC6484D00C40C69 /* hbcarrental.4900projectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		065D513B2BC6484B00C40C69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					065D51422BC6484B00C40C69 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					065D51542BC6484D00C40C69 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 065D51422BC6484B00C40C69;
+					};
+					065D515E2BC6484D00C40C69 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 065D51422BC6484B00C40C69;
+					};
+				};
+			};
+			buildConfigurationList = 065D513E2BC6484B00C40C69 /* Build configuration list for PBXProject "hbcarrental.4900project" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 065D513A2BC6484B00C40C69;
+			productRefGroup = 065D51442BC6484B00C40C69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				065D51422BC6484B00C40C69 /* hbcarrental.4900project */,
+				065D51542BC6484D00C40C69 /* hbcarrental.4900projectTests */,
+				065D515E2BC6484D00C40C69 /* hbcarrental.4900projectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		065D51412BC6484B00C40C69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065D51502BC6484D00C40C69 /* Preview Assets.xcassets in Resources */,
+				065D514D2BC6484D00C40C69 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D51532BC6484D00C40C69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D515D2BC6484D00C40C69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		065D513F2BC6484B00C40C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065D51492BC6484B00C40C69 /* ContentView.swift in Sources */,
+				065D51752BC7282800C40C69 /* ReservationView.swift in Sources */,
+				065D514B2BC6484B00C40C69 /* Item.swift in Sources */,
+				065D51472BC6484B00C40C69 /* hbcarrental_4900projectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D51512BC6484D00C40C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065D515A2BC6484D00C40C69 /* hbcarrental_4900projectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		065D515B2BC6484D00C40C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065D51662BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift in Sources */,
+				065D51642BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		065D51572BC6484D00C40C69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 065D51422BC6484B00C40C69 /* hbcarrental.4900project */;
+			targetProxy = 065D51562BC6484D00C40C69 /* PBXContainerItemProxy */;
+		};
+		065D51612BC6484D00C40C69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 065D51422BC6484B00C40C69 /* hbcarrental.4900project */;
+			targetProxy = 065D51602BC6484D00C40C69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		065D51672BC6484D00C40C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		065D51682BC6484D00C40C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		065D516A2BC6484D00C40C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hbcarrental.4900project/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		065D516B2BC6484D00C40C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"hbcarrental.4900project/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		065D516D2BC6484D00C40C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hbcarrental.4900project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hbcarrental.4900project";
+			};
+			name = Debug;
+		};
+		065D516E2BC6484D00C40C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900projectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hbcarrental.4900project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/hbcarrental.4900project";
+			};
+			name = Release;
+		};
+		065D51702BC6484D00C40C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = hbcarrental.4900project;
+			};
+			name = Debug;
+		};
+		065D51712BC6484D00C40C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cisc4900project.hbcarrental-4900projectUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = hbcarrental.4900project;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		065D513E2BC6484B00C40C69 /* Build configuration list for PBXProject "hbcarrental.4900project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065D51672BC6484D00C40C69 /* Debug */,
+				065D51682BC6484D00C40C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		065D51692BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065D516A2BC6484D00C40C69 /* Debug */,
+				065D516B2BC6484D00C40C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		065D516C2BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900projectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065D516D2BC6484D00C40C69 /* Debug */,
+				065D516E2BC6484D00C40C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		065D516F2BC6484D00C40C69 /* Build configuration list for PBXNativeTarget "hbcarrental.4900projectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				065D51702BC6484D00C40C69 /* Debug */,
+				065D51712BC6484D00C40C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 065D513B2BC6484B00C40C69 /* Project object */;
+}
