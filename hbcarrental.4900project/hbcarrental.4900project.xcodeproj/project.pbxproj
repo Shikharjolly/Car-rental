@@ -16,6 +16,7 @@
 		065D51642BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51632BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift */; };
 		065D51662BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */; };
 		065D51752BC7282800C40C69 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51742BC7282700C40C69 /* ReservationView.swift */; };
+		065D51772BCB369800C40C69 /* CarDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51762BCB369800C40C69 /* CarDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		065D51632BC6484D00C40C69 /* hbcarrental_4900projectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectUITests.swift; sourceTree = "<group>"; };
 		065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		065D51742BC7282700C40C69 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		065D51762BCB369800C40C69 /* CarDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				065D514C2BC6484D00C40C69 /* Assets.xcassets */,
 				065D514E2BC6484D00C40C69 /* Preview Content */,
 				065D51742BC7282700C40C69 /* ReservationView.swift */,
+				065D51762BCB369800C40C69 /* CarDatabase.swift */,
 			);
 			path = hbcarrental.4900project;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				065D51492BC6484B00C40C69 /* ContentView.swift in Sources */,
+				065D51772BCB369800C40C69 /* CarDatabase.swift in Sources */,
 				065D51752BC7282800C40C69 /* ReservationView.swift in Sources */,
 				065D514B2BC6484B00C40C69 /* Item.swift in Sources */,
 				065D51472BC6484B00C40C69 /* hbcarrental_4900projectApp.swift in Sources */,

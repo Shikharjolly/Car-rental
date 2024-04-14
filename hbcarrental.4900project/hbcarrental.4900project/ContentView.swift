@@ -1,8 +1,6 @@
-/*
-ContentView.swift
-hbcarrental.4900project
-Created by Ayrat Aymetov 4/10/24.
-*/
+// ContentView.swift
+// hbcarrental.4900project
+// Created by Ayrat Aymetov 4/10/24.
 
 import SwiftUI
 
@@ -10,8 +8,10 @@ let myColor = Color(red: 14/255, green: 22/255, blue: 24/255)
 
 struct ContentView: View {
 
-    @State private var selectedLocation = "Choose Office"
+    @State private var now = Date()
+    @State private var selectedLocation = "Kingston"
     @State private var returnSameLocation = true
+    @State private var returnLocation = "Kingston"
     @State private var pickupDate = Date()
     @State private var returnDate = Date()
 
@@ -31,18 +31,39 @@ struct ContentView: View {
                         HStack {
                             Text("Place to pick up the car")
                             Spacer()
-                            Picker("Choose Office", selection: $selectedLocation) {
+                            Picker("Select pick-up location", selection: $selectedLocation) {
                                 ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
                                     Text($0)
                                 }
                             }
                             .pickerStyle(MenuPickerStyle())
                         }
-                        Toggle(isOn: $returnSameLocation) {
+
+                        if !returnSameLocation {
+                            HStack {
+                                Text("Place to drop off the car")
+                                Spacer()
+                                Picker("Select return location", selection: $returnLocation) {
+                                    ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
+                                        Text($0)
+                                    }
+                                }
+                                .pickerStyle(MenuPickerStyle())
+                            }
+                        } 
+
+                         Toggle(isOn: $returnSameLocation) {
                             Text("Return to the same location")
                         }
-                        DatePicker("Pick-up Date", selection: $pickupDate, displayedComponents: .date)
+                        .onChange(of: returnSameLocation) { value in
+                            if value {
+                                returnLocation = selectedLocation
+                            }
+                        }
+
+                        DatePicker("Pick-up Date", selection: $pickupDate, in: Date()..., displayedComponents: .date)
                         DatePicker("Pick-up Time", selection: $pickupDate, displayedComponents: .hourAndMinute)
+                            .modifier(DisablePastDates(date: $pickupDate))
                     }
                     .padding()
                     .background(Color.white)
@@ -54,22 +75,27 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal, 20)
                     VStack {
-                        DatePicker("Drop Date/Time", selection: $returnDate, displayedComponents: .date)
-                        DatePicker("Drop Time", selection: $pickupDate, displayedComponents: .hourAndMinute)
+                        DatePicker("Drop Date", selection: $returnDate, in: pickupDate..., displayedComponents: .date)
+                        DatePicker("Drop Time", selection: $returnDate, displayedComponents: .hourAndMinute)
+                            .modifier(DisablePastTimes(date: $returnDate, pickupDate: pickupDate))
                     }
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.yellow, lineWidth: 1))
                     .padding(.horizontal, 20)
-                    
-                    NavigationLink(destination: ReservationView(selectedLocation: selectedLocation, pickupDate: pickupDate, returnDate: returnDate)) {
+
+                    NavigationLink(destination: ReservationView(selectedLocation: selectedLocation,
+                                                                returnLocation: returnLocation, 
+                                                                pickupDate: pickupDate, 
+                                                                returnDate: returnDate)) {
                         Text("Continue reservation")
                             .foregroundColor(.black)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow))
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal, 20)
+                            .padding(.top, 20)
                     }
 
                     Button("Start over") {
@@ -104,6 +130,37 @@ struct ContentView: View {
     }
 }
 
+
+struct DisablePastDates: ViewModifier {
+    @Environment(\.calendar) var calendar
+    @Binding var date: Date
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: date) { newValue in
+                if calendar.isDate(newValue, inSameDayAs: Date()) && newValue < Date().addingTimeInterval(60*60) {
+                    date = Date().addingTimeInterval(60*60)
+                } else if newValue < Date() {
+                    date = Date()
+                }
+            }
+    }
+}
+
+struct DisablePastTimes: ViewModifier {
+    @Environment(\.calendar) var calendar
+    @Binding var date: Date
+    var pickupDate: Date
+
+    func body(content: Content) -> some View {
+        content
+            .onChange(of: date) { newValue in
+                if calendar.isDate(newValue, inSameDayAs: pickupDate) && newValue < pickupDate.addingTimeInterval(60*60) {
+                    date = pickupDate.addingTimeInterval(60*60)
+                }
+            }
+    }
+}
 
 struct SectionHeader: View {
     var title: String
