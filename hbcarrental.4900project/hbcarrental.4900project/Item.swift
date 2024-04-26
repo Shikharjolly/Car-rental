@@ -1,5 +1,5 @@
 /*
-ContentView.swift
+Item.swift
 hbcarrental.4900project
 Created by Ayrat Aymetov 4/10/24.
 */

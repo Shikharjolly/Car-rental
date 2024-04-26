@@ -1,4 +1,4 @@
-// ContentView.swift
+// ReservationView.swift
 // hbcarrental.4900project
 // Created by Ayrat Aymetov 4/10/24.
 
@@ -197,6 +197,8 @@ struct ReservationView: View {
             }
         }
         .background(Color.gray.opacity(0.2))
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)  
     }
     
     private let dateFormatter: DateFormatter = {
@@ -240,40 +242,3 @@ struct ReservationView_Previews: PreviewProvider {
         ReservationView(selectedLocation: "Location", returnLocation: "Location", pickupDate: Date(), returnDate: Date())
     }
 }
-
-
-// addition
-// VStack(alignment: .leading, spacing: 5) {
-            //   TextField("Type", text: .constant("--"))
-            //   TextField("Add-ons", text: .constant("--"))
-            // }
-            // .foregroundColor(.black)
-            // .padding()
-            // .background(Color.white)
-            // .frame(maxWidth: .infinity)
-          
-        //   VStack(alignment: .leading, spacing: 0) {
-        //     HStack(spacing: 15) {
-        //       Image("three_icon")
-        //         .resizable()
-        //         .aspectRatio(contentMode: .fit)
-        //         .frame(height: 40)
-        //         .frame(width: 40)
-        //       Text("Reserve Your Vehicle")
-        //         .font(.title2)
-        //         .fontWeight(.bold)
-        //         .foregroundColor(.white)
-        //     }
-        //     .padding()
-        //     .frame(maxWidth: .infinity)
-        //     .background(Color.black.opacity(0.5)) 
-
-        //     VStack(alignment: .leading, spacing: 5) {
-        //       TextField("Your Information", text: .constant(""))
-        //       TextField("Payment Information", text: .constant(""))
-        //     }
-        //     .foregroundColor(.black)
-        //     .padding()
-        //     .background(Color.white)
-        //     .frame(maxWidth: .infinity)
-        //   }

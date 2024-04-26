@@ -1,5 +1,5 @@
 /*
-ContentView.swift
+hbcarrental_4900projectApp.swift
 hbcarrental.4900project
 Created by Ayrat Aymetov 4/10/24.
 */
@@ -21,11 +21,18 @@ struct hbcarrental_4900projectApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
+    
+    @StateObject var userAuth = UserAuth()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userAuth.isLoggedin {
+                ContentView()
+            } else {
+                SplashScreen()
+            }
         }
+        .environmentObject(userAuth)
         .modelContainer(sharedModelContainer)
     }
 }

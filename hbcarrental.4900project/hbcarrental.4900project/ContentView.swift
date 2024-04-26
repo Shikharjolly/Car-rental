@@ -7,6 +7,7 @@ import SwiftUI
 let myColor = Color(red: 14/255, green: 22/255, blue: 24/255)
 
 struct ContentView: View {
+    @EnvironmentObject var userAuth: UserAuth
 
     @State private var now = Date()
     @State private var selectedLocation = "Kingston"
@@ -16,117 +17,126 @@ struct ContentView: View {
     @State private var returnDate = Date()
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                HeaderView()
-                    .padding(.top, 50)
+        if userAuth.isLoggedin {
+            NavigationView {
+                ScrollView {
+                    VStack(spacing: 0) {
+                        Rectangle()
+                            .fill(myColor)
+                            .frame(height: 50)
+                            .edgesIgnoringSafeArea(.top)
+                        HeaderView()
 
-                Spacer()
+                        Spacer()
 
-                VStack {
-                    SectionHeader(title: "PICK UP")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                    VStack {
-                        HStack {
-                            Text("Place to pick up the car")
-                            Spacer()
-                            Picker("Select pick-up location", selection: $selectedLocation) {
-                                ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
-                                    Text($0)
+                        VStack {
+                            SectionHeader(title: "PICK UP")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 20)
+                            VStack {
+                                HStack {
+                                    Text("Place to pick up the car")
+                                    Spacer()
+                                    Picker("Select pick-up location", selection: $selectedLocation) {
+                                        ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
+                                            Text($0)
+                                        }
+                                    }
+                                    .pickerStyle(MenuPickerStyle())
                                 }
-                            }
-                            .pickerStyle(MenuPickerStyle())
-                        }
 
-                        if !returnSameLocation {
-                            HStack {
-                                Text("Place to drop off the car")
-                                Spacer()
-                                Picker("Select return location", selection: $returnLocation) {
-                                    ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
-                                        Text($0)
+                                if !returnSameLocation {
+                                    HStack {
+                                        Text("Place to drop off the car")
+                                        Spacer()
+                                        Picker("Select return location", selection: $returnLocation) {
+                                            ForEach(["Other", "Kingston", "St. Catherine", "Ocho Rios", "Montego Bay"], id: \.self) {
+                                                Text($0)
+                                            }
+                                        }
+                                        .pickerStyle(MenuPickerStyle())
+                                    }
+                                } 
+
+                                Toggle(isOn: $returnSameLocation) {
+                                    Text("Return to the same location")
+                                }
+                                .onChange(of: returnSameLocation) { value in
+                                    if value {
+                                        returnLocation = selectedLocation
                                     }
                                 }
-                                .pickerStyle(MenuPickerStyle())
+
+                                DatePicker("Pick-up Date", selection: $pickupDate, in: Date()..., displayedComponents: .date)
+                                DatePicker("Pick-up Time", selection: $pickupDate, displayedComponents: .hourAndMinute)
+                                    .modifier(DisablePastDates(date: $pickupDate))
                             }
-                        } 
-
-                         Toggle(isOn: $returnSameLocation) {
-                            Text("Return to the same location")
-                        }
-                        .onChange(of: returnSameLocation) { value in
-                            if value {
-                                returnLocation = selectedLocation
-                            }
-                        }
-
-                        DatePicker("Pick-up Date", selection: $pickupDate, in: Date()..., displayedComponents: .date)
-                        DatePicker("Pick-up Time", selection: $pickupDate, displayedComponents: .hourAndMinute)
-                            .modifier(DisablePastDates(date: $pickupDate))
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.yellow, lineWidth: 1))
-                    .padding(.horizontal, 20)
-
-                    SectionHeader(title: "RETURN")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.horizontal, 20)
-                    VStack {
-                        DatePicker("Drop Date", selection: $returnDate, in: pickupDate..., displayedComponents: .date)
-                        DatePicker("Drop Time", selection: $returnDate, displayedComponents: .hourAndMinute)
-                            .modifier(DisablePastTimes(date: $returnDate, pickupDate: pickupDate))
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.yellow, lineWidth: 1))
-                    .padding(.horizontal, 20)
-
-                    NavigationLink(destination: ReservationView(selectedLocation: selectedLocation,
-                                                                returnLocation: returnLocation, 
-                                                                pickupDate: pickupDate, 
-                                                                returnDate: returnDate)) {
-                        Text("Continue reservation")
-                            .foregroundColor(.black)
                             .padding()
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow))
-                            .frame(maxWidth: .infinity)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.yellow, lineWidth: 1))
                             .padding(.horizontal, 20)
-                            .padding(.top, 20)
-                    }
 
-                    Button("Start over") {
-                        withAnimation {
-                            self.selectedLocation = "Choose Office"
-                            self.returnSameLocation = true
-                            self.pickupDate = Date()
-                            self.returnDate = Date()
+                            SectionHeader(title: "RETURN")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.horizontal, 20)
+                            VStack {
+                                DatePicker("Drop Date", selection: $returnDate, in: pickupDate..., displayedComponents: .date)
+                                DatePicker("Drop Time", selection: $returnDate, displayedComponents: .hourAndMinute)
+                                    .modifier(DisablePastTimes(date: $returnDate, pickupDate: pickupDate))
+                            }
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.yellow, lineWidth: 1))
+                            .padding(.horizontal, 20)
+
+                            NavigationLink(destination: ReservationView(selectedLocation: selectedLocation,
+                                                                        returnLocation: returnLocation, 
+                                                                        pickupDate: pickupDate, 
+                                                                        returnDate: returnDate)) {
+                                Text("Continue reservation")
+                                    .foregroundColor(.black)
+                                    .padding()
+                                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow))
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.horizontal, 20)
+                                    .padding(.top, 20)
+                            }
+
+                            Button("Start over") {
+                                withAnimation {
+                                    self.selectedLocation = "Choose Office"
+                                    self.returnSameLocation = true
+                                    self.pickupDate = Date()
+                                    self.returnDate = Date()
+                                }
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .padding()
+                            .foregroundColor(.red)
+                            .underline()
+                            .font(.headline)
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 20)
                         }
+
+                        Spacer()
+
+                        InfoView()
+                            .padding(.top, 20)
+
+                        BottomView()
+                            .padding(.top, 20)
+                            .padding(.bottom, 20)
                     }
-                    .buttonStyle(PlainButtonStyle())
-                    .padding()
-                    .foregroundColor(.red)
-                    .underline()
-                    .font(.headline)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 20)
+                    .background(Color.white.edgesIgnoringSafeArea(.all))
                 }
-
-                Spacer()
-
-                InfoView()
-                    .padding(.top, 20)
-
-                BottomView()
-                    .padding(.top, 20)
-                    .padding(.bottom, 20)
+                .edgesIgnoringSafeArea(.all)
             }
-            .background(Color.white.edgesIgnoringSafeArea(.all))
+        } else {
+            SignInView()
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -174,6 +184,8 @@ struct SectionHeader: View {
 }
 
 struct HeaderView: View {
+    @State private var showingFaceTimeAlert = false
+
     var body: some View {
         VStack(spacing: 0) { 
             Image("logo")
@@ -183,7 +195,20 @@ struct HeaderView: View {
                 .background(myColor)
 
             HStack {
-                Text("800-458-6440")
+                Button(action: {
+                    self.showingFaceTimeAlert = true
+                }) {
+                    Text("800-458-6440")
+                }
+                .alert(isPresented: $showingFaceTimeAlert) {
+                    Alert(title: Text("Open FaceTime?"), message: Text("Do you want to make a FaceTime call to 800-458-6440?"), primaryButton: .default(Text("OK"), action: {
+                        if let url = URL(string: "facetime://8004586440") {
+                            if UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    }), secondaryButton: .cancel())
+                }
                 Spacer()
                 Button(action: {
                     
