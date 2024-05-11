@@ -1,6 +1,5 @@
 // ContentView.swift
 // hbcarrental.4900project
-// Created by Ayrat Aymetov 4/10/24.
 
 import SwiftUI
 
@@ -276,16 +275,16 @@ struct BottomView: View {
                         .foregroundColor(.white)
 
                     VStack(alignment: .leading, spacing: 20) {
-                        Link(destination: URL(string: "https://www.example.com/faqs")!) {
+                        Link(destination: URL(string: "https://hbcarrental.com/faqs/")!) {
                             Text("FAQs")
                         }
-                        Link(destination: URL(string: "https://www.example.com/travel-blog")!) {
+                        Link(destination: URL(string: "https://hbcarrental.com/jamzeen-v1/")!) {
                             Text("Travel Blog")
                         }
-                        Link(destination: URL(string: "https://www.example.com/rental-terms")!) {
+                        Link(destination: URL(string: "https://hbcarrental.com/hummingbird-car-rental-terms-and-conditions/")!) {
                             Text("Rental Terms")
                         }
-                        Link(destination: URL(string: "https://www.example.com/contact-us")!) {
+                        Link(destination: URL(string: "https://hbcarrental.com/contact-us/")!) {
                             Text("Contact Us")
                         }
                     }
@@ -293,28 +292,28 @@ struct BottomView: View {
                 }
                 .padding(.trailing, 20)
 
-                VStack(alignment: .leading) {
-                    Text("CUSTOMER PORTAL")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-
-                    VStack(alignment: .leading, spacing: 20) {
-                        Link(destination: URL(string: "https://www.example.com/login")!) {
-                            Text("Log In")
-                        }
-                        Link(destination: URL(string: "https://www.example.com/my-account")!) {
-                            Text("My Account")
-                        }
-                        Link(destination: URL(string: "https://www.example.com/logout")!) {
-                            Text("Log Out")
-                        }
-                        Link(destination: URL(string: "https://www.example.com/register")!) {
-                            Text("Register")
-                        }
-                    }
-                    .padding(.top, 10) 
-                }
+//                VStack(alignment: .leading) {
+//                    Text("CUSTOMER PORTAL")
+//                        .font(.headline)
+//                        .fontWeight(.bold)
+//                        .foregroundColor(.white)
+//
+//                    VStack(alignment: .leading, spacing: 20) {
+//                        Link(destination: URL(string: "https://www.example.com/login")!) {
+//                            Text("Log In")
+//                        }
+//                        Link(destination: URL(string: "https://www.example.com/my-account")!) {
+//                            Text("My Account")
+//                        }
+//                        Link(destination: URL(string: "https://www.example.com/logout")!) {
+//                            Text("Log Out")
+//                        }
+//                        Link(destination: URL(string: "https://www.example.com/register")!) {
+//                            Text("Register")
+//                        }
+//                    }
+//                    .padding(.top, 10) 
+//                }
             }
             .frame(maxWidth: .infinity)
 

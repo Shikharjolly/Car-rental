@@ -1,7 +1,5 @@
 //  CustomerInformation.swift
 //  hbcarrental.4900project
-//
-//  Created by Ayrat Aymetov on 4/25/24.
 
 import Foundation
 

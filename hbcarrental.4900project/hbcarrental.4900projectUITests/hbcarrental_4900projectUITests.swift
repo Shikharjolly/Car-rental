@@ -1,8 +1,5 @@
-/*
-ContentView.swift
-hbcarrental.4900project
-Created by Ayrat Aymetov 4/10/24.
-*/
+// ContentView.swift
+// hbcarrental.4900project
 
 import XCTest
 

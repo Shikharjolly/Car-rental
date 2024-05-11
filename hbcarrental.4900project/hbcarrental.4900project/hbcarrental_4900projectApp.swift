@@ -1,8 +1,5 @@
-/*
-hbcarrental_4900projectApp.swift
-hbcarrental.4900project
-Created by Ayrat Aymetov 4/10/24.
-*/
+// hbcarrental_4900projectApp.swift
+// hbcarrental.4900project
 
 import SwiftUI
 import SwiftData

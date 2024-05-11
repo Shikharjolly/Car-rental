@@ -95,8 +95,6 @@ struct SignInView: View {
                 ForgotPasswordAlertView(isShowing: $showingForgotPasswordAlert, email: $forgotPasswordEmail)
             }
         }
-        // .navigationBarBackButtonHidden(true)
-        // .navigationBarHidden(true)
     }
 }
 
@@ -133,7 +131,7 @@ struct ForgotPasswordAlertView: View {
         .background(Color.white)
         .cornerRadius(10)
         .shadow(color: .gray, radius: 5, x: 0, y: 5)
-        .padding(.horizontal, 50) // Add horizontal padding here
+        .padding(.horizontal, 50)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black.opacity(0.5))
         .edgesIgnoringSafeArea(.all)
