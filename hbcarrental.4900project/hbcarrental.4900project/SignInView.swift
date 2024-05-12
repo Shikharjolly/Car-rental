@@ -1,6 +1,5 @@
 //  SignInView.swift
 // hbcarrental.4900project
-// Created by Ayrat Aymetov 4/24/24.
 
 import SwiftUI
 

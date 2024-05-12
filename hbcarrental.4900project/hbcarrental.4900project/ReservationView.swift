@@ -9,9 +9,18 @@ struct ReservationView: View {
     var pickupDate: Date
     var returnDate: Date
 
+    //added line
+    @State private var reservationInfo: ReservationInfo?
+
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour], from: pickupDate, to: returnDate)
+        let numberOfHours = components.hour ?? 0
+        let numberOfDays = numberOfHours / 24
+        let remainingHours = numberOfHours % 24
+
         ScrollView {
             VStack(spacing: 10) {
                 HeaderView_Reservation
@@ -84,6 +93,11 @@ struct ReservationView: View {
             VStack {
                 Spacer()
                 ForEach(carDatabase.indices, id: \.self) { index in
+
+                    let totalPrice = Double(numberOfHours) * carDatabase[index].pricePerHour
+                    let discountedPrice = totalPrice * (1 - carDatabase[index].discountPayNow)
+                    let savings = totalPrice * carDatabase[index].discountPayNow
+                    
                     VStack {
                         HStack {
                             Image(carDatabase[index].imageName)
@@ -145,14 +159,14 @@ struct ReservationView: View {
                         HStack {
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text("$548.80/Total")
+                                    Text("$\(totalPrice, specifier: "%.2f")/Total")
                                         .font(.system(size: 11))
-                                    Text("7 days / 0 hours")
+                                    Text("\(numberOfDays) days / \(remainingHours) hours")
                                         .font(.system(size: 8))
-                                    Text("SAVES YOU $123.20")
-                                        .font(.system(size: 8))
+                                    Text(" ")
+                                        .font(.system(size: 8)) 
                                 }
-                                Button(action: {}) {
+                                NavigationLink(destination: CarConfirmation(total: totalPrice, car: carDatabase[index])) {
                                     Text("PAY LATER")
                                         .foregroundColor(.black)
                                         .padding(5)
@@ -164,24 +178,34 @@ struct ReservationView: View {
                                                 .stroke(Color.yellow, lineWidth: 1)
                                         )
                                 }
+                                .onTapGesture {
+                                    reservationInfo = ReservationInfo(selectedLocation: selectedLocation, returnLocation: returnLocation, pickupDate: pickupDate, returnDate: returnDate, totalPrice: totalPrice, car: carDatabase[index])
+                                }
                             }
 
                             HStack {
                                 VStack(alignment: .leading) {
-                                    Text("$672.00/Total")
+                                    Text("$\(discountedPrice, specifier: "%.2f")/Total")
                                         .font(.system(size: 11))
-                                    Text("7 days / 0 hours")
-                                        .font(.system(size: 8))
-                                    Text(" ")
+                                    Text("\(numberOfDays) days / \(remainingHours) hours")
+                                        .font(.system(size: 8))                               
+                                    Text("SAVES YOU $\(savings, specifier: "%.2f")")
                                         .font(.system(size: 8))
                                 }
-                                Button(action: {}) {
+                                NavigationLink(destination: CarConfirmation(total: discountedPrice, car: carDatabase[index])) {
                                     Text("PAY NOW")
                                         .foregroundColor(.black)
                                         .padding(5)
-                                        .background(Color.yellow)
+                                        .background(Color.white)
                                         .cornerRadius(2)
                                         .font(.system(size: 10))
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 2)
+                                                .stroke(Color.yellow, lineWidth: 1)
+                                        )
+                                }
+                                .onTapGesture {
+                                    reservationInfo = ReservationInfo(selectedLocation: selectedLocation, returnLocation: returnLocation, pickupDate: pickupDate, returnDate: returnDate, totalPrice: discountedPrice, car: carDatabase[index])
                                 }
                             }
                         }

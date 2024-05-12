@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0632A6252BF02DDA00321EC5 /* Payment_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0632A6242BF02DDA00321EC5 /* Payment_Screen.swift */; };
+		0632A6272BF02FDF00321EC5 /* CarConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0632A6262BF02FDF00321EC5 /* CarConfirmation.swift */; };
 		0642C27B2BDC59FA00A9C7BD /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0642C27A2BDC59FA00A9C7BD /* UserAuth.swift */; };
 		065D51472BC6484B00C40C69 /* hbcarrental_4900projectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51462BC6484B00C40C69 /* hbcarrental_4900projectApp.swift */; };
 		065D51492BC6484B00C40C69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51482BC6484B00C40C69 /* ContentView.swift */; };
@@ -18,6 +20,7 @@
 		065D51662BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */; };
 		065D51752BC7282800C40C69 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51742BC7282700C40C69 /* ReservationView.swift */; };
 		065D51772BCB369800C40C69 /* CarDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D51762BCB369800C40C69 /* CarDatabase.swift */; };
+		0681F0432BF05CE400A6EE9B /* ReservationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0681F0422BF05CE400A6EE9B /* ReservationInfo.swift */; };
 		06EE80A82BDB003200EB398F /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE80A72BDB003200EB398F /* SplashScreen.swift */; };
 		06EE80AA2BDB1D8C00EB398F /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE80A92BDB1D8C00EB398F /* LandingPage.swift */; };
 		06EE80AC2BDB259100EB398F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE80AB2BDB259100EB398F /* SignInView.swift */; };
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0632A6242BF02DDA00321EC5 /* Payment_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment_Screen.swift; sourceTree = "<group>"; };
+		0632A6262BF02FDF00321EC5 /* CarConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarConfirmation.swift; sourceTree = "<group>"; };
 		0642C27A2BDC59FA00A9C7BD /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		065D51432BC6484B00C40C69 /* hbcarrental.4900project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hbcarrental.4900project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065D51462BC6484B00C40C69 /* hbcarrental_4900projectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectApp.swift; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 		065D51652BC6484D00C40C69 /* hbcarrental_4900projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hbcarrental_4900projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		065D51742BC7282700C40C69 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		065D51762BCB369800C40C69 /* CarDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDatabase.swift; sourceTree = "<group>"; };
+		0681F0422BF05CE400A6EE9B /* ReservationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationInfo.swift; sourceTree = "<group>"; };
 		06EE80A72BDB003200EB398F /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		06EE80A92BDB1D8C00EB398F /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		06EE80AB2BDB259100EB398F /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 				06EE80AD2BDB34FA00EB398F /* CustomerInformation.swift */,
 				06EE80AF2BDB38C900EB398F /* SignUpView.swift */,
 				0642C27A2BDC59FA00A9C7BD /* UserAuth.swift */,
+				0632A6242BF02DDA00321EC5 /* Payment_Screen.swift */,
+				0632A6262BF02FDF00321EC5 /* CarConfirmation.swift */,
+				0681F0422BF05CE400A6EE9B /* ReservationInfo.swift */,
 			);
 			path = hbcarrental.4900project;
 			sourceTree = "<group>";
@@ -284,8 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0632A6252BF02DDA00321EC5 /* Payment_Screen.swift in Sources */,
+				0632A6272BF02FDF00321EC5 /* CarConfirmation.swift in Sources */,
 				06EE80AA2BDB1D8C00EB398F /* LandingPage.swift in Sources */,
 				06EE80AE2BDB34FA00EB398F /* CustomerInformation.swift in Sources */,
+				0681F0432BF05CE400A6EE9B /* ReservationInfo.swift in Sources */,
 				06EE80A82BDB003200EB398F /* SplashScreen.swift in Sources */,
 				065D51492BC6484B00C40C69 /* ContentView.swift in Sources */,
 				065D51772BCB369800C40C69 /* CarDatabase.swift in Sources */,
