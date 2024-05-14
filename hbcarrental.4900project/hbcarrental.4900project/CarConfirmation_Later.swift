@@ -1,19 +1,20 @@
-//  CarConfirmation2.swift
+//
+//  CarConfirmation_Later.swift
 //  hbcarrental.4900project
 //
-//  Created by Shikhar Jolly on 5/11/24.
-//  modified by Ramatoulaye Kebe on 5/13/24
+//  Created by Ramatoulaye Kebe on 5/13/24.
+//
 
 import SwiftUI
 
-struct AddOnOption: Identifiable {
+struct AddOnOption_Later: Identifiable {
     let id = UUID()
     let name: String
     let price: Double
     var selected: Bool = false
 }
 
-struct CarConfirmation: View {
+struct CarConfirmation_Later: View {
     var total: Double
     var car: Car
     @State private var totalWithAddons: Double
@@ -72,26 +73,27 @@ struct CarConfirmation: View {
                     .font(.title)
                     .bold()
                     .padding()
-                HStack {
-                    NavigationLink(destination: Payment_Screen(total: totalWithAddons, selectedAddOns: selectedAddOns, carImageName: car.imageName)) {
-                        Text("Pay Now")
+                    .padding(.trailing)
+                    
+                    NavigationLink(destination: Payment_Later_Screen(total: totalWithAddons, car: car, addOns: selectedAddOns)) {
+                        Text("Pay Later")
                             .foregroundColor(.black)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 10).fill(Color.yellow))
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal, 20)
                             .padding(.top, 20)
-                    }
-                    .padding(.trailing)
-
+                    
                 }
             }
         }
     }
 }
 
-struct CarConfirmation_Previews: PreviewProvider {
+struct CarConfirmationLater_Previews: PreviewProvider {
     static var previews: some View {
         CarConfirmation(total: 100.0, car: carDatabase[2])
     }
 }
+
+

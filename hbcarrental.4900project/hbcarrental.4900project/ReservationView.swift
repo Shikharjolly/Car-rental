@@ -1,5 +1,6 @@
 // ReservationView.swift
 // hbcarrental.4900project
+// modified by Ramatoulaye Kebe
 
 import SwiftUI
 
@@ -36,8 +37,8 @@ struct ReservationView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
-                                .frame(width: 140, alignment: .center) 
-                                .multilineTextAlignment(.center) 
+                                .frame(width: 140, alignment: .center)
+                                .multilineTextAlignment(.center)
                         }
                         .background(Color.black.opacity(0.5))
                         .frame(width: 600)
@@ -59,7 +60,7 @@ struct ReservationView: View {
                     }
                     .foregroundColor(.black)
                     .padding()
-                    .padding(.horizontal, 10) 
+                    .padding(.horizontal, 10)
                     .background(Color.white)
                     .frame(width: 600)
                 }
@@ -164,9 +165,9 @@ struct ReservationView: View {
                                     Text("\(numberOfDays) days / \(remainingHours) hours")
                                         .font(.system(size: 8))
                                     Text(" ")
-                                        .font(.system(size: 8)) 
+                                        .font(.system(size: 8))
                                 }
-                                NavigationLink(destination: CarConfirmation(total: totalPrice, car: carDatabase[index])) {
+                                NavigationLink(destination: CarConfirmation_Later(total: totalPrice, car: carDatabase[index])) {
                                     Text("PAY LATER")
                                         .foregroundColor(.black)
                                         .padding(5)
@@ -188,7 +189,7 @@ struct ReservationView: View {
                                     Text("$\(discountedPrice, specifier: "%.2f")/Total")
                                         .font(.system(size: 11))
                                     Text("\(numberOfDays) days / \(remainingHours) hours")
-                                        .font(.system(size: 8))                               
+                                        .font(.system(size: 8))
                                     Text("SAVES YOU $\(savings, specifier: "%.2f")")
                                         .font(.system(size: 8))
                                 }
@@ -196,7 +197,7 @@ struct ReservationView: View {
                                     Text("PAY NOW")
                                         .foregroundColor(.black)
                                         .padding(5)
-                                        .background(Color.white)
+                                        .background(Color.yellow)
                                         .cornerRadius(2)
                                         .font(.system(size: 10))
                                         .overlay(
@@ -221,7 +222,7 @@ struct ReservationView: View {
         }
         .background(Color.gray.opacity(0.2))
         .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)  
+        .navigationBarHidden(true) 
     }
     
     private let dateFormatter: DateFormatter = {
@@ -231,14 +232,10 @@ struct ReservationView: View {
         return formatter
     }()
     
-    private func goBack() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
-    
     private var HeaderView_Reservation: some View {
         HStack() {
             Button(action: {
-                goBack()
+                presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "arrow.left")
                     .resizable()

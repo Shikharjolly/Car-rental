@@ -292,28 +292,28 @@ struct BottomView: View {
                 }
                 .padding(.trailing, 20)
 
-//                VStack(alignment: .leading) {
-//                    Text("CUSTOMER PORTAL")
-//                        .font(.headline)
-//                        .fontWeight(.bold)
-//                        .foregroundColor(.white)
-//
-//                    VStack(alignment: .leading, spacing: 20) {
-//                        Link(destination: URL(string: "https://www.example.com/login")!) {
-//                            Text("Log In")
-//                        }
-//                        Link(destination: URL(string: "https://www.example.com/my-account")!) {
-//                            Text("My Account")
-//                        }
-//                        Link(destination: URL(string: "https://www.example.com/logout")!) {
-//                            Text("Log Out")
-//                        }
-//                        Link(destination: URL(string: "https://www.example.com/register")!) {
-//                            Text("Register")
-//                        }
-//                    }
-//                    .padding(.top, 10) 
-//                }
+               VStack(alignment: .leading) {
+                   Text("CUSTOMER PORTAL")
+                       .font(.headline)
+                       .fontWeight(.bold)
+                       .foregroundColor(.white)
+
+                   VStack(alignment: .leading, spacing: 20) {
+                       Link(destination: URL(string: "https://hbcarrental.com/my-account/")!) {
+                           Text("Log In")
+                       }
+                       Link(destination: URL(string: "https://hbcarrental.com/my-account/")!) {
+                           Text("Register")
+                       }
+                       Link(destination: URL(string: "https://hbcarrental.com/my-account/")!) {
+                           Text("Log Out")
+                       }
+                       Link(destination: URL(string: "https://hbcarrental.com/my-account/")!) {
+                           Text("My Account")
+                       }
+                   }
+                   .padding(.top, 10) 
+               }
             }
             .frame(maxWidth: .infinity)
 
